@@ -140,9 +140,11 @@
 <header>
     <div class="header-icon">🗺️</div>
     <div class="header-text">
-        <h1 class="header-title">Provincia de Jujuy <span>· República Argentina</span></h1>
-        <p class="header-subtitle">Variación histórica de alumnos matriculados (Período 2023–2025) por Departamentos - (la matrícula corresponde al total de alumnos inscriptos tanto para todos los niveles como los alumnos inscriptos en Serv. Complementarios, Cursos de capa. de SNU, Trayecto artístico Prof., Cursos y talleres de artística y Ciclos de enseñanza de artística</p>
-        <span class="badge">📋 Fuente: Mapa Educativo Pcial. - RAWeb - Padrón de Establecimientos - Datos al 30 de abril de cada año</span>
+       <center><h1 class="header-title"style="font-size: 14px;">Provincia de Jujuy <span>· República Argentina</span></h1></center>
+
+        <p class="header-subtitle"><center><h1 class="header-title"style="font-size: 7px;">Variación histórica de alumnos matriculados (Período 2023–2025) por Dptos - ( la matrícula corresponde al total de alumnos inscriptos en los niveles educativos y en Serv. Complement., Cursos de Cap. de SNU, Trayecto Art.Prof., Cursos y Talleres de Art. y Ciclos de Enseñanza de Art.</p>
+
+        <span class="badge"><center><h1 class="header-title"style="font-size: 7px;">📋 Fuente: Mapa Educativo Pcial. - RAWeb - Padrón de Establecimientos - Datos al 30 de abril de cada año</span>
     </div>
     <div class="header-deco"></div>
 </header>
@@ -460,7 +462,7 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
                 color: "#5DEBFD",   //para cambiar color de borde de poligonos ok
                 weight: 2, 
                 fillColor: "#020AD6", //para cambiar color de fondo de poligono
-                fillOpacity: 0.5 //para transparencia de poligono
+                fillOpacity: 0.3 //para transparencia de poligono
             },
             onEachFeature: function (feature, layer) {
                 const props = feature.properties;
@@ -476,11 +478,12 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
                 const popupContent = `
                     <div class="popup-content">
                         <h1 style="margin:0;">${props.name}</h1>
-                        <p style="font-size:0.9em; color:#666;"><i>${props.fullname}</i></p>
+                        <p style="font-size:0.9em; color:#2F00FC;"><i>${props.fullname}</i></p> 
                         <hr>
                         <p STYLE="DISPLAY:NONE;"><b>Total Matrícula:</b> ${props['2023'] + props['2024'] + props['2025']}</p> 
  
- Fuente: Mapa Educativo Pcial. - RAWeb - DPIEE - SPE - Ministerio de Educación     
+<p style="font-size: 9px; color: #0B2AF4; margin: 2px 0;">
+ Fuente: Mapa Educativo Pcial. - RAWeb - DPIEE - SPE - Ministerio de Educación</p>   
                         <canvas id="${canvasId}" width="280" height="120"></canvas>
                     </div>
                 `;
@@ -497,9 +500,11 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
         }).addTo(map);
     </script>
     <footer>
-        <span class="footer-text">🏔️ <strong>Desarrollado para Jujuy</strong></span>
+        <span class="footer-text">🏔️<strong>Desarrollado para Jujuy</strong></span>
         <span class="footer-sep">|</span>
         <span class="footer-text">Autor: <strong>Prof. Univ. / T.S.I. Carrasco Sebastián</strong></span>
+        <span class="footer-sep">|</span>
+        <span class="footer-text">E-mail: <strong>spee.dpiee.mapaeducativo@jujuy.edu.ar</strong></span>
         <span class="footer-sep">|</span>
         <span class="footer-text"><strong>2026 Jujuy</strong></span>
         <span class="footer-sep">|</span>
